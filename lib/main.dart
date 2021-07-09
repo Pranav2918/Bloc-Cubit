@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quotes/cubit/quoteCubit.dart';
-import 'package:quotes/screen/quotesview.dart';
+import 'package:quotes/cubit/postCubit.dart';
+import 'package:quotes/screen/postviews.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(primaryColor: Colors.black),
-        home: BlocProvider<QuoteCubit>(
-            child: Quotes(), create: (context) => QuoteCubit()..getQuotes()));
+        home: BlocProvider<PostCubit>(
+            child: Posts(), create: (context) => PostCubit()..getPosts()));
   }
 }
